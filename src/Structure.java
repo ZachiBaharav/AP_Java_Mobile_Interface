@@ -7,9 +7,15 @@
 // Than, other things can be sure this class has these interfaces.
 //
 
+
 public interface Structure {
 
-    double totalWeight();
+    // Interface: 
+    //    Methods are "public abstract"
+    //    Variables are "public static final"
+    //      e.e, public static final int x = 123;
+
+    public abstract double totalWeight();
     boolean isBalanced();
 
 }
