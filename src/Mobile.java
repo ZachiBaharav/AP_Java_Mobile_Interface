@@ -17,7 +17,7 @@ public class Mobile implements Structure{
     }
     
     public boolean isBalanced() {
-        return bl.torque() == br.torque();
+        return bl.torque() == br.torque()  && bl.isBalanced() && br.isBalanced() ;
     }
     
     

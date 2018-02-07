@@ -1,6 +1,6 @@
 
 
-public class Branch {
+public class Branch implements Structure {
     private double myLength;
     private Structure myS;       // either a mobile or weight
 
@@ -19,6 +19,10 @@ public class Branch {
 
     public double torque() {
         return myS.totalWeight()*myLength;
+    }
+    
+    public boolean isBalanced() {
+        return myS.isBalanced();
     }
     
     

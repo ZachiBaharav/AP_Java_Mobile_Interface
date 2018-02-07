@@ -99,6 +99,32 @@ public class Main {
         
         //m2.setIndent();
         System.out.println("Mobile structure:\n" + m2.toString());
+
+        /*
+                 6  |   5
+            +-------+-----+
+          1 |  3 <---     |
+         +------+         12
+         |      |
+         8      2
+        
+        */
+        
+        Branch bb1l = new Branch(1,new Weight(8));  // <-- Note: constructor with Weight
+        Branch bb1r = new Branch(3,new Weight(2));
+        Mobile mm1 = new Mobile(bb1l,bb1r);
+        
+        Branch bb2l = new Branch(6,mm1);             // Constructor with Mobile
+        Branch bb2r = new Branch(5,new Weight(12));
+        Mobile mm2 = new Mobile(bb2l,bb2r);
+        
+
+        System.out.println("Mobile is balanced: " + mm2.isBalanced());
+        
+        
+        //m2.setIndent();
+        System.out.println("Mobile structure:\n" + mm2.toString());
+
         
     }
 
